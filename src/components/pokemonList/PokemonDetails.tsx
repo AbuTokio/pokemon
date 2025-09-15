@@ -3,13 +3,13 @@ import "./PokemonDetails.css"
 import type { IPokemon } from "../../interfaces/IPokemon"
 import { PokemonType } from "../../enum/PokemonType"
 
-interface PokemonDetailsProps {
+interface IPokemonDetailsProps {
   pokemon: IPokemon,
   altText: string,
   sprite: 
 }
 
-export default function PokemonDetails({pokemon}: PokemonDetailsProps) {
+export default function PokemonDetails({pokemon}: IPokemonDetailsProps) {
   return (
     <>
       <aside>
