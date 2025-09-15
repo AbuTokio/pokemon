@@ -1,3 +1,5 @@
+import "./Loader.css"
+
 export default function Loader() {
-  return <div>Loader</div>
+  return <img className="loader" src="/img/icon_pokeball.svg" alt="pokeball" />
 }
