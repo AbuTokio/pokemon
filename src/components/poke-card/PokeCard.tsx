@@ -1,11 +1,14 @@
 import "./pokeCard.css"
-import { dummyPokemon } from "../../data/data"
 import { capitalizeString, formatNumber } from "../../utilis/Utilis"
-import { TypeTag } from "../typeTag/typeTag"
+import TypeTag from "../typeTag/typeTag"
+import type { PokemonType } from "../../enum/PokemonType"
+import type { IPokemon } from "../../interfaces/IPokemon"
 
-export default function PokemonCard() {
-  const pokemon = dummyPokemon[0]
+interface IPokeCardsProps {
+  pokemon: IPokemon
+}
 
+export default function PokeCard({ pokemon }: IPokeCardsProps) {
   return (
     <div className="card">
       <div className="card-background">
@@ -15,8 +18,8 @@ export default function PokemonCard() {
         <p>{formatNumber(pokemon.id, 4) ?? "?"}</p>
         <p>{capitalizeString(pokemon.name)}</p>
         <div className="type-tags">
-          {types.map((t) => (
-            <TypeTag key={t} type={t} />
+          {pokemon.types.map((t) => (
+            <TypeTag key={t.type.name} type={t.type.name as PokemonType} />
           ))}
         </div>
       </div>

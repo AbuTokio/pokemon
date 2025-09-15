@@ -1,10 +1,10 @@
-import PokemonCard from "../../components/pokeCard/pokeCard"
+import PokemonList from "../../components/pokemonList/PokemonList"
 
 export default function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <PokemonCard />
+      <PokemonList />
     </div>
   )
 }
