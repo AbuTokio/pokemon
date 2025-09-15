@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import type { IPokemon } from "../interfaces/Pokemon"
+import type { IPokemon } from "../interfaces/IPokemon"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const pokemonContext = createContext<PokemonProviderProps | null>(null)
