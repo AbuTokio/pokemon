@@ -32,6 +32,11 @@ export default function PokeCard({ pokemonResult }: IPokeCardsProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  useEffect(() => {
+    if (pokemon && pokemon.id === 1) setSelectedPokemon(pokemon)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pokemon])
+
   return (
     <>
       {pokemon && (
