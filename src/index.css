@@ -1,0 +1,66 @@
+:root {
+  font-family: var(--font-text), Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--font-color-1st);
+  background-color: var(--bg-color);
+
+  /* ----- Variables for Styling ----- */
+
+  --font-headline: "Poppins-Bold";
+  --font-text: "Poppins-Regular";
+
+  --font-color-1st: #182537;
+  --font-color-2nd: #858f99;
+
+  --bg-color: #f7f8fc;
+  --icon-color: #777a7b;
+  --pokemon-color-red: #e76058;
+
+  --box-shadow: 1px -2px 34px -3px rgba(133, 143, 153, 0.4);
+  --box-radius: 1.5rem;
+}
+
+/* ------ Fonts ------ */
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../public/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../public/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../public/fonts/Poppins-Light.ttf");
+}
+
+/* ----- Gobal Styling ----- */
+
+a {
+  font-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headline);
+}
+
+.bg_image {
+  position: absolute;
+  top: -8rem;
+  left: -10rem;
+  z-index: -1;
+  overflow: hidden;
+  width: 30rem;
+  height: 30rem;
+  background-image: url("../public/img/icon_pokeball_cutout.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}

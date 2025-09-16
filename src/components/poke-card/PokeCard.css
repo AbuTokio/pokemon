@@ -1,3 +1,51 @@
-* {
-  color: red;
+<<<<<<< HEAD
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 40px 20px 20px 20px;
+  width: 200px;
+  margin: 40px auto;
+  transition: transform 0.2s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-details img {
+  position: absolute;
+  top: -50px;
+  width: 128px;
+  height: 128px;
+  z-index: 2;
+}
+
+.id-number {
+  color: #a0a0a0;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1e2b3a;
+}
+
+.card.active {
+  background-color: #fff700;
+  transform: scale(1.1);
+  z-index: 1;
+}
+=======
+>>>>>>> development

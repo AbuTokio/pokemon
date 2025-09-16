@@ -6,17 +6,17 @@ import type { IPokemon } from "../../interfaces/IPokemon"
 
 interface IPokeCardsProps {
   pokemon: IPokemon
+  isActive: boolean
+  onClick: () => void //wenn auf die Karte geklickt wird, soll die aktive ID aktualisiert werden
 }
 
-export default function PokeCard({ pokemon }: IPokeCardsProps) {
+export default function PokeCard({ pokemon, isActive, onClick }: IPokeCardsProps) {
   return (
-    <div className="card">
-      <div className="card-background">
-        <img src={pokemon.sprites.front_default} alt={`Image of ${pokemon.name}`} className="card-img" />
-      </div>
+    <div className={`card ${isActive ? "active" : ""}`} onClick={onClick}>
       <div className="card-details">
-        <p>{formatNumber(pokemon.id, 4) ?? "?"}</p>
-        <p>{capitalizeString(pokemon.name)}</p>
+        <img src={pokemon.sprites.front_default} alt={`Image of ${pokemon.name}`} className="card-img" />
+        <p className="id-number">{formatNumber(pokemon.id, 4) ?? "?"}</p>
+        <p className="name">{capitalizeString(pokemon.name)}</p>
         <div className="type-tags">
           {pokemon.types.map((t) => (
             <TypeTag key={t.type.name} type={t.type.name as PokemonType} />
