@@ -21,10 +21,9 @@
 
 .card-details img {
   position: absolute;
-  top: -50px;
+  bottom: 85px;
   width: 128px;
   height: 128px;
-  z-index: 2;
 }
 
 .id-number {
@@ -32,6 +31,7 @@
   font-size: 0.75rem;
   margin-bottom: 4px;
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 .name {

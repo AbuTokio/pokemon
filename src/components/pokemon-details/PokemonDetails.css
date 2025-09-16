@@ -11,21 +11,21 @@
   flex-grow: 1;
 }
 
-.wrapper_detail_img {
-  width: 12rem;
-  height: 12rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section_poke_intro {
+  margin-bottom: 1.8rem;
 }
 
-.poke_detail_img {
-  height: 160%;
-  width: 160%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
+.wrapper_detail_img {
+  min-height: 8rem;
+  position: relative;
+}
+
+.wrapper_detail_img img {
+  min-height: 8rem;
+  position: absolute;
+  bottom: 2rem;
+  right: -0.85rem;
+  z-index: 2;
   image-rendering: pixelated;
 }
 
@@ -33,19 +33,27 @@
   margin-bottom: 0.6rem;
 }
 
+.section_poke_info h4 {
+  text-transform: uppercase;
+}
+
 .section_poke_intro p {
   color: var(--font-color-2nd);
 }
 
 .wrapper_infos {
+  width: 20rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-bottom: 1rem;
 }
 
-/* .div_poke_info {
-
-} */
+.div_sound_btn {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
 
 .div_sound_btn img {
   width: 1.5rem;

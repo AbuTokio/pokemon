@@ -18,7 +18,7 @@ export default function PokemonDetails() {
             <section className="section_poke_intro">
               <div className="wrapper_detail_img">
                 <img
-                  src={selectedPokemon.sprites.front_default}
+                  src={selectedPokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}
                   alt={`Image of ${selectedPokemon.name}`}
                   className="poke_detail_img"
                 />
@@ -38,10 +38,10 @@ export default function PokemonDetails() {
           <p>{pokemon.}</p>
         </section> */}
 
-            <section className="div_poke_info">
+            <section className="section_poke_info">
               <div className="div_poke_abilities">
                 <h4>Abilities</h4>
-                <div className="wrapper_abilities"></div>
+                <div className="wrapper_infos"></div>
               </div>
               <div className="wrapper_infos">
                 <div className="div_poke_info">
@@ -55,19 +55,22 @@ export default function PokemonDetails() {
                 </div>
               </div>
 
-              <div className="div_poke_info">
-                <h4>Base Exp</h4>
-                <InfoTags text={selectedPokemon.base_experience} />
-              </div>
+              <div className="wrapper_infos">
+                <div className="div_poke_info">
+                  <h4>Base Exp</h4>
+                  <InfoTags text={selectedPokemon.base_experience} />
+                </div>
 
-              <div className="div_sound_btn">
-                <a
-                  onClick={() => {
-                    const audio = new Audio(selectedPokemon.cries.legacy)
-                    audio.play()
-                  }}>
-                  <img src="../../../public/img/icon_note.svg" alt="Icon music note" />
-                </a>
+                <div className="div_sound_btn">
+                  <a
+                    onClick={() => {
+                      const audio = new Audio(selectedPokemon.cries.legacy)
+                      audio.play()
+                      audio.volume = 0.05
+                    }}>
+                    <img src="../../../public/img/icon_note.svg" alt="Icon music note" />
+                  </a>
+                </div>
               </div>
             </section>
 
