@@ -1,8 +1,10 @@
 footer {
-  height: 8rem;
+  height: 4rem;
+  font-size: 0.75rem;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-color: var(--pokemon-color-red);
   color: white;
+  padding-left: 4rem;
 }

@@ -1,18 +1,22 @@
-.section_pokemonlist {
-  padding: 20px;
+.wrapper_pokemonlist {
   max-width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
   height: 50vh;
+  margin-left: 1rem;
+  box-shadow: var(--box-shadow);
+  background-color: #d3d7dd;
+  border-radius: var(--box-radius);
+  padding: 2rem;
 }
 
 .pokemon_cards {
   max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1rem;
   align-items: center;
 }

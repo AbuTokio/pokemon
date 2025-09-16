@@ -40,7 +40,7 @@ export default function PokemonList() {
   }, [pokemonResults])
 
   return (
-    <section className="section_pokemonlist">
+    <div className="wrapper_pokemonlist">
       <article className="pokemon_cards">
         {pokemonResults.map((pokemonResult, index) => (
           <div key={index}>
@@ -49,6 +49,6 @@ export default function PokemonList() {
         ))}
       </article>
       {loading ? <Loader /> : <div ref={loadMoreRef} style={{ height: "20px" }} />}
-    </section>
+    </div>
   )
 }

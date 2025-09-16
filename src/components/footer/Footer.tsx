@@ -3,7 +3,9 @@ import "./Footer.css"
 export default function Footer() {
   return (
     <>
-      <footer>Created by Bünny, Malte und Riya 🚀</footer>
+      <footer>
+        <p>Created by Bünny, Malte und Riya 🚀</p>
+      </footer>
     </>
   )
 }
