@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { IPokemon } from "../../interfaces/IPokemon"
 import "./PokemonList.css"
 import { dummyPokemon } from "../../data/data"
+import PokeCard from "../poke-card/PokeCard"
 
 export default function PokemonList() {
   const [listedPokemon, setListedPokemon] = useState<IPokemon[]>(dummyPokemon)
@@ -12,7 +13,7 @@ export default function PokemonList() {
         {listedPokemon.map((pokemon, index) => {
           return (
             <div key={index}>
-              <PokemonCard pokemon={pokemon} />
+              <PokeCard pokemon={pokemon} />
             </div>
           )
         })}
