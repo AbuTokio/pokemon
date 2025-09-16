@@ -1,0 +1,21 @@
+.div_sound_btn img {
+  width: 1.5rem;
+}
+
+.wrapper_detail_img {
+  width: 16rem;
+  height: 16rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke_detail_img {
+  height: 140%;
+  width: 140%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: pixelated;
+}

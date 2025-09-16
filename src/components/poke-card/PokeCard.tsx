@@ -1,6 +1,6 @@
 import "./pokeCard.css"
 import { capitalizeString, formatNumber } from "../../utilis/Utilis"
-import TypeTag from "../typeTag/typeTag"
+import TypeTag from "../type-tag/TypeTag"
 import type { PokemonType } from "../../enum/PokemonType"
 import type { IPokemon } from "../../interfaces/IPokemon"
 

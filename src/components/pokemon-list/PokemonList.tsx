@@ -2,10 +2,11 @@ import { useState } from "react"
 import type { IPokemon } from "../../interfaces/IPokemon"
 import "./PokemonList.css"
 import { dummyPokemon } from "../../data/data"
-import PokeCard from "../pokeCard/pokeCard"
+import PokeCard from "../poke-card/PokeCard"
 
 export default function PokemonList() {
   const [listedPokemon, setListedPokemon] = useState<IPokemon[]>(dummyPokemon)
+
   return (
     <>
       <section className="section_pokemonlist">
