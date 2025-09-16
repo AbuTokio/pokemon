@@ -1,3 +1,17 @@
 header {
-  height: 12rem;
+  height: 16rem;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.div_logo {
+  margin-bottom: 2rem;
+}
+
+.div_logo img {
+  width: 40rem;
+}
+
+.div_searchbar {
+  padding: 0 1rem;
 }

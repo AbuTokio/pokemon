@@ -1,0 +1,12 @@
+.searchbar {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  height: 4rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.searchbar::placeholder {
+  color: var(--font-color-2nd);
+}
