@@ -3,7 +3,7 @@ import "./Footer.css"
 export default function Footer() {
   return (
     <>
-      <footer>Footer</footer>
+      <footer>Created by Bünny, Malte und Riya 🚀</footer>
     </>
   )
 }

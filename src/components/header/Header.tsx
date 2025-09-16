@@ -3,7 +3,11 @@ import "./Header.css"
 export default function Header() {
   return (
     <>
-      <header>Header</header>
+      <header>
+        <div>
+          <img src="" alt="" />
+        </div>
+      </header>
     </>
   )
 }
