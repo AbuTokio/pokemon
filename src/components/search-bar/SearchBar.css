@@ -10,3 +10,11 @@
 .searchbar::placeholder {
   color: var(--font-color-2nd);
 }
+
+#pokeball_cutout {
+  width: 1.8rem;
+  fill: var(--pokemon-color-red);
+}
+#pokeball_cutout .cls-1 {
+  fill: var(--pokemon-color-red);
+}
