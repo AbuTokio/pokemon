@@ -4,6 +4,7 @@ import { PokemonType } from "../../enum/PokemonType"
 import TypeTag from "../type-tag/TypeTag"
 import { capitalizeString, formatNumber } from "../../utilis/Utilis"
 import "./PokemonDetails.css"
+import InfoTags from "../info-tags/InfoTags"
 
 interface IPokemonDetailsProps {
   pokemon: IPokemon
@@ -42,17 +43,21 @@ export default function PokemonDetails({ pokemon }: IPokemonDetailsProps) {
             <h4>Abilities</h4>
             <div className="wrapper_abilities"></div>
           </div>
+          <div className="wrapper_infos">
+            <div className="div_poke_info">
+              <h4>Height</h4>
+              <InfoTags text={`${pokemon.height} m`} />
+            </div>
 
-          <div className="div_poke_height">
-            <h4>Height</h4>
+            <div className="div_poke_info">
+              <h4>Weight</h4>
+              <InfoTags text={`${pokemon.weight} kg`} />
+            </div>
           </div>
 
-          <div className="div_poke_weight">
-            <h4>Weight</h4>
-          </div>
-
-          <div className="div_poke_exp">
+          <div className="div_poke_info">
             <h4>Base Exp</h4>
+            <InfoTags text={pokemon.base_experience} />
           </div>
 
           <div className="div_sound_btn">

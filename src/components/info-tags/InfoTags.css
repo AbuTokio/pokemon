@@ -1,4 +1,8 @@
 .info_tag {
+  width: 100%;
+  font-size: 0.8rem;
+  background-color: var(--bg-color);
   border-radius: var(--box-radius);
   border: none;
+  padding: 0.5rem;
 }

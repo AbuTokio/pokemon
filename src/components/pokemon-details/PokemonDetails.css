@@ -1,11 +1,14 @@
 .div_aside {
   background-color: white;
   border-radius: var(--box-radius);
-  box-shadow: var(--box-radius);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
   align-items: center;
+}
+
+.div_aside section {
+  flex-grow: 1;
 }
 
 .wrapper_detail_img {
@@ -33,6 +36,16 @@
 .section_poke_intro p {
   color: var(--font-color-2nd);
 }
+
+.wrapper_infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* .div_poke_info {
+
+} */
 
 .div_sound_btn img {
   width: 1.5rem;

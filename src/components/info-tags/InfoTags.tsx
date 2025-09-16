@@ -1,7 +1,7 @@
 import "./InfoTags.css"
 
 interface IInfoTagsProps {
-  text: string
+  text: string | number
 }
 
 export default function InfoTags({ text }: IInfoTagsProps) {
