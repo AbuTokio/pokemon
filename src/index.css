@@ -15,6 +15,7 @@
   --font-color-2nd: #858f99;
 
   --bg-color: #f7f8fc;
+  --bg-footer-color: #f0f1f7;
   --icon-color: #777a7b;
   --pokemon-color-red: #e76058;
 
@@ -40,6 +41,12 @@
 }
 
 /* ----- Gobal Styling ----- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 a {
   font-style: none;

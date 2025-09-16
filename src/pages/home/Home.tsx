@@ -12,9 +12,8 @@ export default function Home({ pokemon }: IHomeProps) {
   const firstPokemon = dummyPokemon[0]
 
   return (
-    <div>
+    <div className="wrapper_home_layout">
       <div className="bg_image"></div>
-      <h1>Home</h1>
       <PokemonList />
       <aside className="aside_poke_details">
         <PokemonDetails pokemon={firstPokemon} />
