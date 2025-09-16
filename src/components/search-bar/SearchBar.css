@@ -1,3 +1,10 @@
+.wrapper_searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .searchbar {
   border: none;
   border-radius: 1rem;
@@ -11,10 +18,14 @@
   color: var(--font-color-2nd);
 }
 
-#pokeball_cutout {
-  width: 1.8rem;
-  fill: var(--pokemon-color-red);
+.search_button {
+  border: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  background-color: transparent;
 }
-#pokeball_cutout .cls-1 {
-  fill: var(--pokemon-color-red);
+
+.search_button img {
+  width: 3.4rem;
+  height: 3.4rem;
 }
