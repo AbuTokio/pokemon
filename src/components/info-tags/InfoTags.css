@@ -1,0 +1,4 @@
+.info_tag {
+  border-radius: var(--box-radius);
+  border: none;
+}

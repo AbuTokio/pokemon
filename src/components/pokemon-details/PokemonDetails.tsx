@@ -2,7 +2,8 @@ import "./PokemonDetails.css"
 import type { IPokemon } from "../../interfaces/IPokemon"
 import { PokemonType } from "../../enum/PokemonType"
 import TypeTag from "../type-tag/TypeTag"
-import { formatNumber } from "../../utilis/Utilis"
+import { capitalizeString, formatNumber } from "../../utilis/Utilis"
+import "./PokemonDetails.css"
 
 interface IPokemonDetailsProps {
   pokemon: IPokemon
@@ -22,7 +23,7 @@ export default function PokemonDetails({ pokemon }: IPokemonDetailsProps) {
             <img src={pokemon.sprites.front_default} alt={`Image of ${pokemon.name}`} className="poke_detail_img" />
           </div>
           <p>{formatNumber(pokemon.id, 4) ?? "?"}</p>
-          <h2></h2>
+          <h2>{capitalizeString(pokemon.name)}</h2>
           <div className="div_poke_types">
             {pokemon.types.map((t) => (
               <TypeTag key={t.type.name} type={t.type.name as PokemonType} />
