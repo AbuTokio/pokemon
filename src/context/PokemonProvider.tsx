@@ -17,8 +17,8 @@ export interface PokemonProviderProps {
   setOffset: React.Dispatch<React.SetStateAction<number>>
   pokemonResults: Result[]
   setPokemonResults: React.Dispatch<React.SetStateAction<Result[]>>
-  hasNext?: boolean
-  setHasNext?: React.Dispatch<React.SetStateAction<boolean>>
+  loading: boolean
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default function PokemonProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export default function PokemonProvider({ children }: { children: React.ReactNod
   const [selectedPokemon, setSelectedPokemon] = useState<IPokemon | null>(null)
   const [offset, setOffset] = useState(0)
   const [pokemonResults, setPokemonResults] = useState<Result[]>([])
-  const [hasNext, setHasNext] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -58,8 +58,8 @@ export default function PokemonProvider({ children }: { children: React.ReactNod
         setOffset,
         pokemonResults,
         setPokemonResults,
-        hasNext,
-        setHasNext,
+        loading,
+        setLoading,
       }}>
       {children}
     </pokemonContext.Provider>
