@@ -1,14 +1,9 @@
 import PokemonList from "../../components/pokemon-list/PokemonList"
 import PokemonDetails from "../../components/pokemon-details/PokemonDetails"
-import type { IPokemon } from "../../interfaces/IPokemon"
 import { dummyPokemon } from "../../data/data"
 import "./Home.css"
 
-interface IHomeProps {
-  pokemon: IPokemon
-}
-
-export default function Home({ pokemon }: IHomeProps) {
+export default function Home() {
   const firstPokemon = dummyPokemon[0]
 
   return (

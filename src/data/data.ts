@@ -1,7 +1,5 @@
 import type { IPokemon } from "../interfaces/IPokemon"
 
-export let activePokemon: number = 2
-
 export const dummyPokemon: IPokemon[] = [
   {
     abilities: [
