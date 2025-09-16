@@ -1,4 +1,13 @@
 .section_pokemonlist {
+  padding: 20px;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon_cards {
   max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
