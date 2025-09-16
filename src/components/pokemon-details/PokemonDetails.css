@@ -1,10 +1,19 @@
-.div_sound_btn img {
-  width: 1.5rem;
+.div_aside {
+  background-color: white;
+  border-radius: var(--box-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div_aside section {
+  flex-grow: 1;
 }
 
 .wrapper_detail_img {
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -12,10 +21,32 @@
 }
 
 .poke_detail_img {
-  height: 140%;
-  width: 140%;
+  height: 160%;
+  width: 160%;
   display: block;
   object-fit: cover;
   object-position: center;
   image-rendering: pixelated;
+}
+
+.section_poke_intro h2 {
+  margin-bottom: 0.6rem;
+}
+
+.section_poke_intro p {
+  color: var(--font-color-2nd);
+}
+
+.wrapper_infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* .div_poke_info {
+
+} */
+
+.div_sound_btn img {
+  width: 1.5rem;
 }
