@@ -35,7 +35,6 @@ export default function PokemonProvider({ children }: { children: React.ReactNod
         const resp = await axios.get<IResponse>(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`)
         if (resp.data.results) {
           setPokemonResults([...pokemonResults, ...resp.data.results])
-          console.log(pokemonResults)
         }
       } catch (error) {
         console.error(error)
