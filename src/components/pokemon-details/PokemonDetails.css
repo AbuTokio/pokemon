@@ -16,16 +16,18 @@
 }
 
 .wrapper_detail_img {
-  min-height: 8rem;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper_detail_img img {
   min-height: 8rem;
-  position: absolute;
+  /* position: absolute;
   bottom: 2rem;
   right: -0.85rem;
-  z-index: 2;
+  z-index: 2; */
+  margin-top: -2.5rem;
   image-rendering: pixelated;
 }
 

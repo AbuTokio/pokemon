@@ -9,6 +9,14 @@ import { pokemonContext, type PokemonProviderProps } from "../../context/Pokemon
 
 export default function PokemonDetails() {
   const { selectedPokemon } = useContext(pokemonContext) as PokemonProviderProps
+  const animatedPokemon = selectedPokemon?.sprites.other?.showdown.front_default
+  // const animatedPokemon = selectedPokemon?.sprites.versions["generation-v"]["black-white"].animated.front_default
+  const staticPokemon = selectedPokemon?.sprites.front_default
+
+  //   const forwardPokemon = (Number(selectedPokemon) +1)
+  //   const forwardPokemonFunc = () => {
+  // setSelectedPokemon(pokemonResults[pokemonResults.indexOf(selectedPokemon)])
+  // }
 
   return (
     <>
@@ -18,7 +26,7 @@ export default function PokemonDetails() {
             <section className="section_poke_intro">
               <div className="wrapper_detail_img">
                 <img
-                  src={selectedPokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}
+                  src={animatedPokemon ? animatedPokemon : staticPokemon}
                   alt={`Image of ${selectedPokemon.name}`}
                   className="poke_detail_img"
                 />
@@ -75,9 +83,12 @@ export default function PokemonDetails() {
             </section>
 
             <section className="section_back_forward">
-              {/* ---- Platzhalter für Links für Back and Forward Buttons ---- */}
-              {/* <Link />
-          <Link /> */}
+              {/* <button type="button" onClick={setSelectedPokemon(selectedPokemon.de)}>Weiter</button>
+              <button>Zurück</button> */}
+              {/* {Number(selectedPokemon.id) > 1 && <Link to={`/pokemon/${Number(selectedPokemon.id) - 1}`}>Zurück</Link>}
+              {Number(selectedPokemon.id) < 1025 && (
+                <Link to={`/pokemon/${Number(selectedPokemon.id) + 1}`}>Weiter</Link>
+              )} */}
             </section>
           </div>
         </>
