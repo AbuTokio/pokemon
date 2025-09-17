@@ -1,6 +1,6 @@
 import { PokemonType } from "../../enum/PokemonType"
 import { TYPE_COLORS } from "../../constants/TypeColors"
-import "./typeTag.css"
+import "./TypeTag.css"
 
 interface TypeTagProps {
   type: PokemonType
