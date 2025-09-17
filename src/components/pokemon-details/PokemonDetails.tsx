@@ -75,7 +75,7 @@ export default function PokemonDetails() {
                       audio.play()
                       audio.volume = 0.05
                     }}>
-                    <img src="../../../public/img/icon_note.svg" alt="Icon music note" />
+                    <img src="/img/icon_note.svg" alt="Icon music note" />
                   </a>
                 </div>
               </div>
