@@ -1,4 +1,4 @@
-import "./pokeCard.css"
+import "./PokeCard.css"
 import { capitalizeString, formatNumber } from "../../utilis/Utilis"
 import TypeTag from "../type-tag/TypeTag"
 import type { PokemonType } from "../../enum/PokemonType"
