@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <header>
         <div className="div_logo">
-          <img src="../../../public/img/pokedex_logo_02.png" alt="Pokédex Logo" />
+          <img src="../../../public/img/pokedex_logo_02.svg" alt="Pokédex Logo" />
         </div>
 
         <div className="div_searchbar">
