@@ -23,12 +23,26 @@ export default function PokemonDetails() {
         <>
           <div className="div_aside">
             <section className="section_poke_intro">
-              <div className="wrapper_detail_img">
-                <img
-                  src={animatedPokemon ? animatedPokemon : staticPokemon}
-                  alt={`Image of ${selectedPokemon.name}`}
-                  className="poke_detail_img"
-                />
+              <div className="wrapper_detail_img_with_sound">
+                <div className="wrapper_detail_img">
+                  <img
+                    src={animatedPokemon ? animatedPokemon : staticPokemon}
+                    alt={`Image of ${selectedPokemon.name}`}
+                    className="poke_detail_img"
+                  />
+                </div>
+                {selectedPokemon.cries?.legacy && (
+                  <div className="sound_speech_bubble">
+                    <a
+                      onClick={() => {
+                        const audio = new Audio(selectedPokemon.cries.legacy)
+                        audio.play()
+                        audio.volume = 0.05
+                      }}>
+                      <img src="/img/icon_note.svg" alt="Icon music note" />
+                    </a>
+                  </div>
+                )}
               </div>
               <p>{formatNumber(selectedPokemon.id, 4) ?? "?"}</p>
               <h2>{capitalizeString(selectedPokemon.name)}</h2>
@@ -48,8 +62,19 @@ export default function PokemonDetails() {
             <section className="section_poke_info">
               <div className="div_poke_abilities">
                 <h4>Abilities</h4>
-                <div className="wrapper_infos"></div>
+                <div className="wrapper_infos">
+                  {selectedPokemon.abilities?.map(
+                    (a) =>
+                      a?.ability?.name && (
+                        <InfoTags
+                          key={a.ability.name}
+                          text={capitalizeString(a.ability.name) + (a.is_hidden ? " (Hidden)" : "")}
+                        />
+                      )
+                  )}
+                </div>
               </div>
+
               <div className="wrapper_infos">
                 <div className="div_poke_info">
                   <h4>Height</h4>
@@ -68,7 +93,12 @@ export default function PokemonDetails() {
                   <InfoTags text={selectedPokemon.base_experience} />
                 </div>
 
-                <div className="div_sound_btn">
+                <div className="div_poke_info">
+                  <h4>Order</h4>
+                  <InfoTags text={selectedPokemon.order} />
+                </div>
+
+                {/* <div className="div_sound_btn">
                   <a
                     onClick={() => {
                       const audio = new Audio(selectedPokemon.cries.legacy)
@@ -77,8 +107,39 @@ export default function PokemonDetails() {
                     }}>
                     <img src="/img/icon_note.svg" alt="Icon music note" />
                   </a>
+                </div> */}
+              </div>
+
+              <div className="div_poke_stats">
+                <h4>Base Stats</h4>
+                <div className="wrapper_infos">
+                  {selectedPokemon.stats.map((stat) => (
+                    <InfoTags key={stat.stat.name} text={`${capitalizeString(stat.stat.name)}: ${stat.base_stat}`} />
+                  ))}
                 </div>
               </div>
+
+              {selectedPokemon.forms?.length > 1 && (
+                <div className="div_poke_forms">
+                  <h4>Forms</h4>
+                  <div className="wrapper_infos">
+                    {selectedPokemon.forms.map((form) => (
+                      <InfoTags key={form.name} text={capitalizeString(form.name)} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedPokemon.held_items?.length > 0 && (
+                <div className="div_poke_held_items">
+                  <h4>Held Items</h4>
+                  <div className="wrapper_infos">
+                    {selectedPokemon.held_items.map((item) => (
+                      <InfoTags key={item.item.name} text={capitalizeString(item.item.name)} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </section>
 
             <section className="section_back_forward">

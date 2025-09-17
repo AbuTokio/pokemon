@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
 }
 
 .div_aside section {
@@ -59,4 +60,61 @@
 
 .div_sound_btn img {
   width: 1.5rem;
+}
+
+.wrapper_detail_img_with_sound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.sound_speech_bubble {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sound_speech_bubble::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  box-shadow: var(--box-shadow);
+  z-index: 11;
+  /* transition: all 0.2s ease; */
+}
+
+.sound_speech_bubble img {
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.sound_speech_bubble:hover {
+  background-color: #f3f3f3;
+  border-color: #bbb;
+}
+
+.sound_speech_bubble:hover img {
+  filter: brightness(1.2);
+}
+
+.sound_speech_bubble:hover::after {
+  background: #f3f3f3;
+  border-color: #bbb;
+  /* filter: brightness(1.2); */
 }

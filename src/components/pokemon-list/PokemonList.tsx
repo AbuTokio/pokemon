@@ -40,15 +40,17 @@ export default function PokemonList() {
   }, [pokemonResults])
 
   return (
-    <div className="wrapper_pokemonlist">
-      <article className="pokemon_cards">
-        {pokemonResults.map((pokemonResult, index) => (
-          <div key={index}>
-            <PokeCard pokemonResult={pokemonResult} />
-          </div>
-        ))}
-      </article>
-      {loading ? <Loader /> : <div ref={loadMoreRef} style={{ height: "20px" }} />}
+    <div className="wrapper_wrapper">
+      <div className="wrapper_pokemonlist">
+        <article className="pokemon_cards">
+          {pokemonResults.map((pokemonResult, index) => (
+            <div key={index}>
+              <PokeCard pokemonResult={pokemonResult} />
+            </div>
+          ))}
+        </article>
+        {loading ? <Loader /> : <div ref={loadMoreRef} style={{ height: "20px" }} />}
+      </div>
     </div>
   )
 }
