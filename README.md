@@ -1,6 +1,6 @@
 # 👾 Pokédex – Next Generation
 
-Deine digitale Begleiter auf dem Weg zum Pokémon-Meister – durchstöbere alle Pokémon, entdecke ihre Fähigkeiten und folge ihren Ruf.
+Dein digitaler Begleiter auf dem Weg zum Pokémon-Meister – durchstöbere alle Pokémon, entdecke ihre Fähigkeiten und folge ihren Ruf.
 
 ![Pokédex Start](./docs/pokedex_start.png)
 
