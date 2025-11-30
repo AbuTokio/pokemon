@@ -1,12 +1,9 @@
-main {
-  margin-bottom: 3rem;
-}
-
 .wrapper_layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding: 0 3rem;
+  flex: 1;
 }
 
 .aside_poke_details {

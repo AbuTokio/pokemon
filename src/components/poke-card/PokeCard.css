@@ -3,9 +3,9 @@
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 20px 0;
   width: 200px;
-  margin: 40px auto;
+  margin: 30px auto 20px;
   transition: transform 0.2s ease;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .card.active {
-  background-color: #fff700;
+  background-color: #e0f8db;
   transform: scale(1.1);
   z-index: 1;
 }

@@ -4,11 +4,10 @@
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-  height: 50vh;
-  margin-left: 1rem;
+  height: 56vh;
   box-shadow: var(--box-shadow);
   background-color: #d3d7dd;
-  border-radius: var(--box-radius);
+  border-radius: 1rem;
   padding: 2rem;
 }
 
